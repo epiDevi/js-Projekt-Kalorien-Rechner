@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Kalorie Rechner</title>
+</head>
+<body>
+    <div class="wrap flex column center">
+        <section class="container">
+            <h1>Idealgewichtsrechner</h1>
+            <section class="form m-b-40">
+                <form onsubmit="rechnen(); return false" class="flex column">
+                    <section class=" flex column">
+                        <label for="kGroesse" class="m-b-10">Korpergröße</label>
+                        <input type="number" id="kGroesse">
+                    </section>
+                    <section class=" flex column">
+                        <label for="alter" class="m-b-10">Alter</label>
+                        <input type="number" id="alter">
+                    </section>
+                    <section class=" flex column">
+                        <label for="gewicht" class="m-b-10">Gewicht</label>
+                        <input type="number" id="gewicht">
+                    </section>
+                    <h3 class="m-b-10" >Körperbau</h3>
+                    <section class="  flex m-b-40 ">
+                        
+                        <div >
+                            <input  type="radio" name="geschlecht" id="weiblich" value="weiblich" class="m-b-10" checked>
+                            <label for="weiblich">Weiblich</label>
+                        </div>
+                        <div >
+                            <input  type="radio" name="geschlecht" id="maenlich" value="maenlich" class="m-b-10">
+                            <label for="maenlich">Mänlich</label>
+                        </div>
+                    </section>
+                    <section>
+                        <label class="block m-b-10" >Arbeits- und Freizeitaktivität</label>
+                        <select class="m-b-40" name="aktivitaet" id="aktivitaet"> 
+                            <option value="1">Schlafen</option> 
+                            <option value="2">Nur Sitzen oder Liegen</option> 
+                            <option value="3">Ausschließlich sitzende Tätigkeit min wenig oder keiner körperlichen Aktivität in der Freizeit, z.B Büroarbeit </option> 
+                            <option value="4">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer</option>
+                            <option value="5">Überwiegend gehende oder stehende Tätigkeit, z.B Verkeufer, Kellner, Handwerker, Mechaniker, Hausfrauen</option> 
+                            <option value="6">Körperlich anstrengende berufliche Arbeit</option>
+                        </select>
+                    </section>
+
+                    
+                    <input type="submit" value="Berechnen">
+                </form>
+            </section>
+            <section class="ergebnis grid">
+                <div class="leer"></div>
+                
+                    <h3>Kcal</h3>
+                    <h3>KJ</h3>
+                    <p>Grundumsatz</p>
+                    <p class="kcalWert"></p>
+                    <p class="kjWert"></p>
+                    <p >Gesamtumsatz</p>
+                    <p class="kcalWert2"></p>
+                    <p class="kjWert2"></p>
+                
+                
+            </section>
+
+        </section>
+    </div>
+    <script src="./assets/js/main.js" ></script>
+</body>
+</html>
